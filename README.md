@@ -10,7 +10,7 @@ Deployed using Vercel for seamless hosting.
 
 Demo
 -----
-Check out the live application here: `https://items-app-git-main-sreelakshmi-k-ss-projects.vercel.app/`
+Check out the live application here: `https://restaurant-app-git-main-sreelakshmi-k-ss-projects.vercel.app/`
 
 Prerequisites
 -------------

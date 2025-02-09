@@ -43,11 +43,11 @@ const CategoryList: React.FC = () => {
               onClick={() => handleCategoryClick(category.id)}
             />
             {category.opens_at && (
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-tr-lg rounded-bl-lg shadow-md">
+              <div className="absolute top-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-tr-lg rounded-bl-lg shadow-md">
                 Opens at {category.opens_at}
               </div>
             )}
-            <p className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white text-sm px-3 py-1 rounded-md font-bold">
+            <p className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white text-sm px-3 py-1 rounded-md font-bold w-full text-center">
               {category.display_name?.toUpperCase()}
             </p>
           </div>
