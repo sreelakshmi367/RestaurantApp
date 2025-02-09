@@ -14,11 +14,12 @@ const initialState: ItemsState = {
   error: null,
 };
 
+const apiUrl = process.env.REACT_APP_RestaurantApp_Url;
 
 export const fetchItems = createAsyncThunk(
   "items/fetchItems",
   async (categoryId: string) => {
-    const response = await axios.get(`https://stg.tdh.start-tech.ae/api/8661e1bc-87d4-11ef-ba55-0050563f7167/restaurant/2da6c53a-522d-485d-b77c-2fafd601ff0c?cat=${categoryId}`);
+    const response = await axios.get(`${apiUrl}/8661e1bc-87d4-11ef-ba55-0050563f7167/restaurant/2da6c53a-522d-485d-b77c-2fafd601ff0c?cat=${categoryId}`);
     return response.data?.data?.items?.data;
   }
 );

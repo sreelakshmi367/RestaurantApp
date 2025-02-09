@@ -22,10 +22,12 @@ const initialState: CategoriesState = {
   error: null,
 };
 
+const apiUrl = process.env.REACT_APP_RestaurantApp_Url;
+
 export const fetchCategories = createAsyncThunk(
   "categories/fetchCategories",
   async () => {
-    const response = await axios.get("https://stg.tdh.start-tech.ae/api/8661e1bc-87d4-11ef-ba55-0050563f7167/restaurant/categories/2da6c53a-522d-485d-b77c-2fafd601ff0c");
+    const response = await axios.get(`${apiUrl}/8661e1bc-87d4-11ef-ba55-0050563f7167/restaurant/categories/2da6c53a-522d-485d-b77c-2fafd601ff0c`);
     return response.data?.data?.categories;
   }
 );
